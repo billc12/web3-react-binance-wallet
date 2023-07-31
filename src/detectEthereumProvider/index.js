@@ -33,7 +33,7 @@ function detectEthereumProvider({ museBeBinanceWallet = false, silent = false, t
       }
       handled = true
       window.removeEventListener('ethereum#initialized', handleEthereum)
-      const { Binancewallet: BinanceChain } = window
+      const { BinanceChain } = window
       if (BinanceChain && (!museBeBinanceWallet || BinanceChain.isMetaMask)) {
         resolve(BinanceChain)
       } else {
